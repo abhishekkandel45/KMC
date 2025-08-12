@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Club - KMC Student Committee</title>
+    
+    <!-- Modern CSS Framework -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/modern-style.css">
+    
+    <style>
+        .club-hero {
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            color: white;
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .club-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('img/computerclub/comp1.jpg') center/cover;
+            opacity: 0.1;
+        }
+        
+        .club-icon-large {
+            width: 120px;
+            height: 120px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .club-icon-large i {
+            font-size: 3rem;
+            color: white;
+        }
+        
+        .activity-card {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius-xl);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .activity-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .activity-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .activity-icon i {
+            font-size: 1.5rem;
+            color: white;
+        }
+        
+        .member-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .member-card {
+            background: white;
+            border-radius: var(--border-radius-xl);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .member-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .member-image {
+            height: 200px;
+            background: var(--gray-200);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .member-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .member-placeholder {
+            font-size: 3rem;
+            color: var(--gray-400);
+        }
+        
+        .member-info {
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .project-showcase {
+            background: var(--gray-100);
+            padding: 4rem 0;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: var(--border-radius-xl);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .project-image {
+            height: 200px;
+            background: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .project-image i {
+            font-size: 3rem;
+            color: white;
+            opacity: 0.7;
+        }
+        
+        .project-content {
+            padding: 2rem;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .tech-tag {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        
+        .join-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top modern-navbar" id="mainNavbar">
+        <div class="container">
+            <a class="navbar-brand" href="index_new.html">
+                <img src="logo.jpg" alt="KMC Logo" class="logo-img">
+                <span class="brand-text">KMC Student Committee</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index_new.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index_new.html#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#clubs">Clubs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery_new.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index_new.html#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Club Hero Section -->
+    <section class="club-hero">
+        <div class="container text-center">
+            <div class="club-icon-large" data-aos="zoom-in">
+                <i class="fas fa-code"></i>
+            </div>
+            <h1 class="display-4 fw-bold mb-3" data-aos="fade-up">Computer Club</h1>
+            <p class="lead mb-4" data-aos="fade-up" data-aos-delay="200">
+                Exploring the digital frontier through programming, web development, and emerging technologies
+            </p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap" data-aos="fade-up" data-aos-delay="400">
+                <span class="badge bg-light text-primary fs-6 px-3 py-2">Programming</span>
+                <span class="badge bg-light text-primary fs-6 px-3 py-2">Web Development</span>
+                <span class="badge bg-light text-primary fs-6 px-3 py-2">AI & ML</span>
+                <span class="badge bg-light text-primary fs-6 px-3 py-2">Mobile Apps</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Club Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <span class="section-badge">About Our Club</span>
+                    <h2 class="section-title">Coding the Future</h2>
+                    <p class="section-text">
+                        The Computer Club at KMC is a vibrant community of tech enthusiasts, aspiring developers, and digital innovators. We bring together students passionate about technology and provide them with opportunities to learn, create, and excel in the digital world.
+                    </p>
+                    <p class="section-text">
+                        From beginner-friendly coding workshops to advanced AI projects, our club offers a comprehensive learning environment where students can develop both technical skills and creative problem-solving abilities.
+                    </p>
+                    
+                    <div class="row g-3 mt-4">
+                        <div class="col-6">
+                            <div class="stat-item text-center">
+                                <div class="stat-number text-primary">50+</div>
+                                <div class="stat-label">Active Members</div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="stat-item text-center">
+                                <div class="stat-number text-primary">25+</div>
+                                <div class="stat-label">Projects Completed</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <img src="img/computerclub/comp1.jpg" alt="Computer Club" class="img-fluid rounded-4 shadow">
+                        </div>
+                        <div class="col-6">
+                            <img src="img/computerclub/comp2.jpg" alt="Programming Workshop" class="img-fluid rounded-4 shadow mb-3">
+                            <div class="bg-primary text-white p-3 rounded-4 text-center">
+                                <i class="fas fa-laptop-code fa-2x mb-2"></i>
+                                <h6 class="mb-0">Weekly Workshops</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="section-badge">What We Do</span>
+                <h2 class="section-title">Our Activities & Programs</h2>
+                <p class="section-description">Comprehensive learning experiences designed to build technical expertise</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="activity-card h-100">
+                        <div class="activity-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h4>Programming Workshops</h4>
+                        <p>Learn various programming languages including Python, JavaScript, Java, and C++. From basics to advanced concepts.</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-primary me-2"></i>Python Fundamentals</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Web Development</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Data Structures</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="activity-card h-100">
+                        <div class="activity-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h4>Web Development</h4>
+                        <p>Create modern, responsive websites and web applications using the latest technologies and frameworks.</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-primary me-2"></i>HTML, CSS, JavaScript</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>React & Node.js</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Database Design</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="activity-card h-100">
+                        <div class="activity-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h4>AI & Machine Learning</h4>
+                        <p>Explore artificial intelligence, machine learning algorithms, and data science applications.</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-primary me-2"></i>Machine Learning Basics</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Data Analysis</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Neural Networks</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="activity-card h-100">
+                        <div class="activity-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h4>Mobile App Development</h4>
+                        <p>Build mobile applications for Android and iOS platforms using modern development frameworks.</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-primary me-2"></i>React Native</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Flutter</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Native Development</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="activity-card h-100">
+                        <div class="activity-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Cybersecurity</h4>
+                        <p>Learn about digital security, ethical hacking, and protecting systems from cyber threats.</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-primary me-2"></i>Network Security</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Ethical Hacking</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Security Auditing</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+                    <div class="activity-card h-100">
+                        <div class="activity-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h4>Competitions & Hackathons</h4>
+                        <p>Participate in coding competitions, hackathons, and tech challenges to test your skills.</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-primary me-2"></i>Programming Contests</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Hackathons</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Tech Conferences</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Showcase -->
+    <section class="project-showcase">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="section-badge">Our Work</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-description">Innovative projects created by our talented members</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="project-content">
+                            <h4>Student Management System</h4>
+                            <p>A comprehensive web application for managing student records, grades, and attendance.</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="project-content">
+                            <h4>Data Analytics Dashboard</h4>
+                            <p>Interactive dashboard for visualizing and analyzing student performance data.</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Django</span>
+                                <span class="tech-tag">D3.js</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="project-content">
+                            <h4>AI Chatbot</h4>
+                            <p>Intelligent chatbot for answering student queries and providing campus information.</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">TensorFlow</span>
+                                <span class="tech-tag">NLP</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Club Members -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="section-badge">Our Team</span>
+                <h2 class="section-title">Club Leadership</h2>
+                <p class="section-description">Meet the dedicated members leading our tech community</p>
+            </div>
+            
+            <div class="member-grid">
+                <div class="member-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="member-image">
+                        <i class="fas fa-user member-placeholder"></i>
+                    </div>
+                    <div class="member-info">
+                        <h5>Rajesh Sharma</h5>
+                        <p class="text-primary fw-semibold">Club President</p>
+                        <p class="small text-muted">Full-stack developer passionate about AI and machine learning</p>
+                    </div>
+                </div>
+                
+                <div class="member-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="member-image">
+                        <i class="fas fa-user member-placeholder"></i>
+                    </div>
+                    <div class="member-info">
+                        <h5>Priya Patel</h5>
+                        <p class="text-primary fw-semibold">Vice President</p>
+                        <p class="small text-muted">Frontend specialist with expertise in modern web frameworks</p>
+                    </div>
+                </div>
+                
+                <div class="member-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="member-image">
+                        <i class="fas fa-user member-placeholder"></i>
+                    </div>
+                    <div class="member-info">
+                        <h5>Arjun Thapa</h5>
+                        <p class="text-primary fw-semibold">Technical Lead</p>
+                        <p class="small text-muted">Backend expert specializing in cloud computing and DevOps</p>
+                    </div>
+                </div>
+                
+                <div class="member-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="member-image">
+                        <i class="fas fa-user member-placeholder"></i>
+                    </div>
+                    <div class="member-info">
+                        <h5>Maya Singh</h5>
+                        <p class="text-primary fw-semibold">Secretary</p>
+                        <p class="small text-muted">Mobile app developer and UI/UX designer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Section -->
+    <section class="join-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto" data-aos="fade-up">
+                    <h2 class="display-5 fw-bold mb-4">Ready to Code Your Future?</h2>
+                    <p class="lead mb-4">
+                        Join our vibrant community of developers, innovators, and tech enthusiasts. 
+                        Whether you're a beginner or an experienced programmer, there's a place for you in our club.
+                    </p>
+                    <div class="d-flex gap-3 justify-content-center flex-wrap">
+                        <a href="#" class="btn btn-light btn-lg">
+                            <i class="fas fa-user-plus me-2"></i>Join Our Club
+                        </a>
+                        <a href="#" class="btn btn-outline-light btn-lg">
+                            <i class="fas fa-calendar me-2"></i>Attend a Workshop
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="modern-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="footer-section">
+                            <div class="footer-brand">
+                                <img src="logo.jpg" alt="KMC Logo" class="footer-logo">
+                                <h4>KMC Student Committee</h4>
+                            </div>
+                            <p class="footer-description">
+                                Empowering students through diverse clubs and activities, fostering excellence in education and personal development.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3">
+                        <div class="footer-section">
+                            <h5 class="footer-title">Quick Links</h5>
+                            <ul class="footer-links">
+                                <li><a href="index_new.html">Home</a></li>
+                                <li><a href="index_new.html#about">About</a></li>
+                                <li><a href="index_new.html#clubs">Clubs</a></li>
+                                <li><a href="gallery_new.html">Gallery</a></li>
+                                <li><a href="index_new.html#contact">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3">
+                        <div class="footer-section">
+                            <h5 class="footer-title">Contact Info</h5>
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Kathmandu Model Secondary School</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>computerclub@kmc.edu.np</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="text-center">
+                    <p class="copyright">© 2025 KMC Student Committee. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/modern-script.js"></script>
+</body>
+</html>

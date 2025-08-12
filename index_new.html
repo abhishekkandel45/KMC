@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KMC Student Committee - Empowering Student Excellence</title>
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Meta tags for SEO and social sharing -->
+    <meta name="description" content="Official website of KMC Student Committee featuring 12 dynamic clubs, events, and student activities at Kathmandu Model Secondary School.">
+    <meta name="keywords" content="KMC, student committee, clubs, education, Kathmandu, college, activities, events">
+    <meta name="author" content="KMC Student Committee">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kmcstudentcommittee.com/">
+    <meta property="og:title" content="KMC Student Committee - Empowering Student Excellence">
+    <meta property="og:description" content="Discover 12 dynamic clubs and exciting activities at KMC Student Committee. Join our vibrant community of learners and leaders.">
+    <meta property="og:image" content="logo.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://kmcstudentcommittee.com/">
+    <meta property="twitter:title" content="KMC Student Committee - Empowering Student Excellence">
+    <meta property="twitter:description" content="Discover 12 dynamic clubs and exciting activities at KMC Student Committee. Join our vibrant community of learners and leaders.">
+    <meta property="twitter:image" content="logo.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="logo.jpg">
+    <link rel="apple-touch-icon" href="logo.jpg">
+    
+    <!-- Theme color for mobile browsers -->
+    <meta name="theme-color" content="#2563eb">
+    <meta name="msapplication-TileColor" content="#2563eb">
+    
+    <!-- Modern CSS Framework -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/modern-style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top modern-navbar" id="mainNavbar">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <img src="logo.jpg" alt="KMC Logo" class="logo-img">
+                <span class="brand-text">KMC Student Committee</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="clubsDropdown" role="button" data-bs-toggle="dropdown">
+                            Clubs
+                        </a>
+                        <ul class="dropdown-menu modern-dropdown">
+                            <li><a class="dropdown-item" href="computerclub.html"><i class="fas fa-code"></i> Computer Club</a></li>
+                            <li><a class="dropdown-item" href="roboticclub.html"><i class="fas fa-robot"></i> Robotics Club</a></li>
+                            <li><a class="dropdown-item" href="literature.html"><i class="fas fa-book"></i> Literature Club</a></li>
+                            <li><a class="dropdown-item" href="socialclub.html"><i class="fas fa-users"></i> Social Club</a></li>
+                            <li><a class="dropdown-item" href="mediaclub.html"><i class="fas fa-camera"></i> Media Club</a></li>
+                            <li><a class="dropdown-item" href="musicclub.html"><i class="fas fa-music"></i> Music Club</a></li>
+                            <li><a class="dropdown-item" href="danceclub.html"><i class="fas fa-dancer"></i> Dance Club</a></li>
+                            <li><a class="dropdown-item" href="legalclub.html"><i class="fas fa-gavel"></i> Legal Club</a></li>
+                            <li><a class="dropdown-item" href="artsandculture.html"><i class="fas fa-palette"></i> Art & Culture</a></li>
+                            <li><a class="dropdown-item" href="eventmanagementclub.html"><i class="fas fa-calendar-alt"></i> Event Management</a></li>
+                            <li><a class="dropdown-item" href="speechanddebate.html"><i class="fas fa-microphone"></i> Speech & Debate</a></li>
+                            <li><a class="dropdown-item" href="researchandpresentation.html"><i class="fas fa-chart-line"></i> Research & Presentation</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#executives">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#events">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+            </div>
+            
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/indeximg3.jpg" class="d-block w-100" alt="KMC Campus">
+                    <div class="carousel-caption hero-caption">
+                        <h1 class="hero-title" data-aos="fade-up" data-aos-delay="300">Welcome to KMC Student Committee</h1>
+                        <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="500">Empowering students, fostering excellence, building tomorrow's leaders</p>
+                        <div class="hero-buttons" data-aos="fade-up" data-aos-delay="700">
+                            <a href="#about" class="btn btn-primary btn-lg hero-btn">Discover More</a>
+                            <a href="#clubs" class="btn btn-outline-light btn-lg hero-btn">Explore Clubs</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-item">
+                    <img src="img/index2.jpg" class="d-block w-100" alt="Student Activities">
+                    <div class="carousel-caption hero-caption">
+                        <h1 class="hero-title" data-aos="fade-up" data-aos-delay="300">Join Our Community</h1>
+                        <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="500">12 dynamic clubs offering endless opportunities for growth and learning</p>
+                        <div class="hero-buttons" data-aos="fade-up" data-aos-delay="700">
+                            <a href="#clubs" class="btn btn-primary btn-lg hero-btn">Browse Clubs</a>
+                            <a href="#events" class="btn btn-outline-light btn-lg hero-btn">Upcoming Events</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-item">
+                    <img src="img/bg2.jpg" class="d-block w-100" alt="Student Excellence">
+                    <div class="carousel-caption hero-caption">
+                        <h1 class="hero-title" data-aos="fade-up" data-aos-delay="300">Excellence in Everything</h1>
+                        <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="500">From academics to extracurriculars, we strive for greatness</p>
+                        <div class="hero-buttons" data-aos="fade-up" data-aos-delay="700">
+                            <a href="#executives" class="btn btn-primary btn-lg hero-btn">Meet Our Team</a>
+                            <a href="gallery.html" class="btn btn-outline-light btn-lg hero-btn">View Gallery</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="1000">
+            <a href="#about" class="scroll-link">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="about-content">
+                        <span class="section-badge">About Us</span>
+                        <h2 class="section-title">Introducing KMC Student Committee</h2>
+                        <h4 class="section-subtitle">Students' welfare is our welfare</h4>
+                        
+                        <p class="section-text">
+                            The KMC Students Committee serves as the paradigmatic body for all students studying at Kathmandu Model Secondary School. Our mission is to stimulate participation in extra-curricular activities, reinforce expertise and craftsmanship, and enable all-embracing development of students.
+                        </p>
+                        
+                        <p class="section-text">
+                            We act as a bridge between college administration and students, providing platforms to showcase aptitude and achieve greater success. Our committee offers opportunities for both intra and inter-college competitions.
+                        </p>
+                        
+                        <!-- Stats -->
+                        <div class="stats-container">
+                            <div class="stat-item">
+                                <div class="stat-number">12</div>
+                                <div class="stat-label">Active Clubs</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">500+</div>
+                                <div class="stat-label">Active Members</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">50+</div>
+                                <div class="stat-label">Events Annually</div>
+                            </div>
+                        </div>
+                        
+                        <a href="#clubs" class="btn btn-primary btn-lg">Explore Our Clubs</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="about-image">
+                        <img src="logo.jpg" alt="KMC Logo" class="img-fluid rounded-4 shadow-lg">
+                        <div class="floating-card" data-aos="zoom-in" data-aos-delay="500">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h5>Excellence in Education</h5>
+                            <p>Committed to academic and personal growth</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clubs Section -->
+    <section id="clubs" class="section-padding bg-light">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="section-badge">Our Clubs</span>
+                <h2 class="section-title">Explore Our Dynamic Clubs</h2>
+                <p class="section-description">Join one of our 12 specialized clubs and discover your passion while developing new skills</p>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Computer Club -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="club-card h-100">
+                        <div class="club-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h4>Computer Club</h4>
+                        <p>Explore the world of programming, web development, and emerging technologies</p>
+                        <a href="computerclub.html" class="club-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Robotics Club -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="club-card h-100">
+                        <div class="club-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h4>Robotics Club</h4>
+                        <p>Build, program, and compete with cutting-edge robotic systems</p>
+                        <a href="roboticclub.html" class="club-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Literature Club -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="club-card h-100">
+                        <div class="club-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h4>Literature Club</h4>
+                        <p>Dive into the world of creative writing, poetry, and literary analysis</p>
+                        <a href="literature.html" class="club-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Music Club -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="club-card h-100">
+                        <div class="club-icon">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <h4>Music Club</h4>
+                        <p>Express yourself through various musical instruments and vocal performances</p>
+                        <a href="musicclub.html" class="club-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Dance Club -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="club-card h-100">
+                        <div class="club-icon">
+                            <i class="fas fa-dancer"></i>
+                        </div>
+                        <h4>Dance Club</h4>
+                        <p>Explore various dance forms from traditional to contemporary styles</p>
+                        <a href="danceclub.html" class="club-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Event Management Club -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+                    <div class="club-card h-100">
+                        <div class="club-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h4>Event Management</h4>
+                        <p>Plan, organize, and execute memorable events and celebrations</p>
+                        <a href="eventmanagementclub.html" class="club-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5" data-aos="fade-up">
+                <a href="#" class="btn btn-outline-primary btn-lg">View All Clubs</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Executives Section -->
+    <section id="executives" class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="section-badge">Leadership Team</span>
+                <h2 class="section-title">Meet Our Executives</h2>
+                <p class="section-description">Dedicated leaders committed to student excellence and community building</p>
+            </div>
+            
+            <div class="row g-4 justify-content-center">
+                <!-- President -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="team-card">
+                        <div class="team-image">
+                            <img src="img/executive/kristina.JPG" alt="Kristina Shrestha" class="img-fluid">
+                            <div class="team-overlay">
+                                <div class="social-links">
+                                    <a href="https://www.facebook.com/kristina.shrestha.7946" target="_blank">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="https://www.instagram.com/__kristinashrestha__/" target="_blank">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                    <a href="https://www.snapchat.com/add/kristinas5322" target="_blank">
+                                        <i class="fab fa-snapchat"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-content">
+                            <h4>Kristina Shrestha</h4>
+                            <span class="team-position">President</span>
+                            <p>Leading with vision and dedication to student excellence</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Vice President -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="team-card">
+                        <div class="team-image">
+                            <img src="img/executive/brajal.JPG" alt="Brajal Shahi" class="img-fluid">
+                            <div class="team-overlay">
+                                <div class="social-links">
+                                    <a href="#" target="_blank">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="#" target="_blank">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-content">
+                            <h4>Brajal Shahi</h4>
+                            <span class="team-position">Vice President</span>
+                            <p>Supporting leadership and driving innovation</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Secretary -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="team-card">
+                        <div class="team-image">
+                            <img src="img/executive/sujan.JPG" alt="Sujan" class="img-fluid">
+                            <div class="team-overlay">
+                                <div class="social-links">
+                                    <a href="#" target="_blank">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="#" target="_blank">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-content">
+                            <h4>Sujan</h4>
+                            <span class="team-position">Secretary</span>
+                            <p>Ensuring smooth operations and communication</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="section-padding bg-primary text-white">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="section-badge badge-light">Upcoming Events</span>
+                <h2 class="section-title text-white">Don't Miss Out</h2>
+                <p class="section-description text-white-50">Stay updated with our latest events and activities</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="event-card">
+                        <div class="event-date">
+                            <span class="day">25</span>
+                            <span class="month">Aug</span>
+                        </div>
+                        <div class="event-content">
+                            <h4>KMC Fun Fest 2025</h4>
+                            <p><i class="fas fa-map-marker-alt"></i> KMC Campus</p>
+                            <p>Annual cultural festival featuring performances from all clubs</p>
+                            <a href="#" class="btn btn-outline-light btn-sm">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="event-card">
+                        <div class="event-date">
+                            <span class="day">10</span>
+                            <span class="month">Sep</span>
+                        </div>
+                        <div class="event-content">
+                            <h4>Techno Fest 2025</h4>
+                            <p><i class="fas fa-map-marker-alt"></i> KMC Campus</p>
+                            <p>Technology showcase featuring robotics, programming, and innovation</p>
+                            <a href="#" class="btn btn-outline-light btn-sm">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5" data-aos="fade-up">
+                <a href="upcomingevent.html" class="btn btn-light btn-lg">View All Events</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="section-badge">Get In Touch</span>
+                <h2 class="section-title">Contact Us</h2>
+                <p class="section-description">Have questions? We'd love to hear from you</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-8 mx-auto" data-aos="fade-up">
+                    <div class="contact-form-container">
+                        <form class="contact-form">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                        <label for="name">Your Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                        <label for="email">Your Email</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                        <label for="subject">Subject</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" id="message" placeholder="Your Message" style="height: 120px;"></textarea>
+                                        <label for="message">Your Message</label>
+                                    </div>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact Info -->
+            <div class="row g-4 mt-5">
+                <div class="col-lg-4 text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h5>Visit Us</h5>
+                        <p>Kathmandu Model Secondary School<br>Kathmandu, Nepal</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h5>Email Us</h5>
+                        <p>info@kmcstudentcommittee.com<br>contact@kmcstudentcommittee.com</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h5>Call Us</h5>
+                        <p>+977-1-XXXXXXX<br>+977-98XXXXXXXX</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="modern-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <div class="footer-section">
+                            <div class="footer-brand">
+                                <img src="logo.jpg" alt="KMC Logo" class="footer-logo">
+                                <h4>KMC Student Committee</h4>
+                            </div>
+                            <p class="footer-description">
+                                Empowering students through diverse clubs and activities, fostering excellence in education and personal development.
+                            </p>
+                            <div class="social-links">
+                                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-2">
+                        <div class="footer-section">
+                            <h5 class="footer-title">Quick Links</h5>
+                            <ul class="footer-links">
+                                <li><a href="#home">Home</a></li>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#clubs">Clubs</a></li>
+                                <li><a href="#executives">Team</a></li>
+                                <li><a href="gallery.html">Gallery</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3">
+                        <div class="footer-section">
+                            <h5 class="footer-title">Popular Clubs</h5>
+                            <ul class="footer-links">
+                                <li><a href="computerclub.html">Computer Club</a></li>
+                                <li><a href="roboticclub.html">Robotics Club</a></li>
+                                <li><a href="musicclub.html">Music Club</a></li>
+                                <li><a href="danceclub.html">Dance Club</a></li>
+                                <li><a href="literature.html">Literature Club</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3">
+                        <div class="footer-section">
+                            <h5 class="footer-title">Contact Info</h5>
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Kathmandu Model Secondary School, Kathmandu</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>info@kmcstudentcommittee.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span>+977-1-XXXXXXX</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="copyright">© 2025 KMC Student Committee. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <div class="footer-bottom-links">
+                            <a href="#">Privacy Policy</a>
+                            <a href="#">Terms of Service</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/modern-script.js"></script>
+</body>
+</html>

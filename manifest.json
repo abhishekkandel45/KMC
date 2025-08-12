@@ -1,0 +1,28 @@
+{
+    "name": "KMC Student Committee",
+    "short_name": "KMC Committee",
+    "description": "Official website of Kathmandu Model College Student Committee",
+    "start_url": "/index_new.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#2563eb",
+    "orientation": "portrait-primary",
+    "scope": "/",
+    "icons": [
+        {
+            "src": "logo.jpg",
+            "sizes": "192x192",
+            "type": "image/jpeg",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "logo.jpg",
+            "sizes": "512x512",
+            "type": "image/jpeg",
+            "purpose": "any maskable"
+        }
+    ],
+    "categories": ["education", "student", "committee"],
+    "lang": "en",
+    "dir": "ltr"
+}
